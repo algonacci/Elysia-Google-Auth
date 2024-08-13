@@ -27,7 +27,9 @@ const app = new Elysia()
     console.log("onBeforeHandle hook");
   })
   .get("/protected", () => {
-    return;
+    return {
+      message: "Protected endpoint",
+    };
   })
   .get("/users", () => {
     return {
